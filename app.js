@@ -14,9 +14,15 @@ app.get("/", (req, res) => {
 
 app.use("/api/products", products_routes);
 
+const uri = process.env.MONGODB_URI;
+if (!uri) {
+  console.error('MongoDB connection string is missing. Please set MONGODB_URI in the .env file.');
+  process.exit(1);
+}
+
 const start = async () => {
   try {
-    await connectDb(process.env.MONGODB_URL);
+    await connectDb(uri);
     app.listen(PORT, () => {
       console.log(`http://localhost:${PORT}`);
     });
