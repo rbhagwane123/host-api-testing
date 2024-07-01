@@ -1,0 +1,26 @@
+[
+    {
+        "name":"iphone",
+        "price":154,
+        "feature":true,
+        "rating":4.1
+    },
+    {
+        "name":"samsung",
+        "price":500,
+        "feature":false,
+        "rating":3.7
+    },
+    {
+        "name":"samsung21",
+        "price":900,
+        "feature":false,
+        "rating":3.7
+    },
+    {
+        "name":"iphone13",
+        "price":800,
+        "feature":false,
+        "rating":3.7
+    }
+]
